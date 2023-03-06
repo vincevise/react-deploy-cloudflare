@@ -13,9 +13,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./component/Navbar";
 import { gsap, Power3 } from "gsap";
-import Footer from "./component/Footer";
-import Projects from "./pages/Projects"; 
-import Contact from "./pages/Contact"; 
+import Footer from "./component/Footer"; 
 import Cursor from "./component/Cursor";  
 // import ProjectAll from "./component/ProjectAll"; 
 import Loading from "./pages/Loading";
@@ -50,7 +48,7 @@ function App() {
           <Suspense fallback={<Loading/>}>
 
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home2 />} />
               <Route path="/home1" element={<Home1 />} />
               <Route path="/home2" element={<Home2 />} />
 
@@ -70,7 +68,7 @@ function App() {
           </Suspense>
 
           </BrowserRouter>
-          <Footer />
+          {/* <Footer /> */}
         </div>
         <Cursor/>
       </GlobalContext.Provider>
