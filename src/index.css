@@ -1,3 +1,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar{
+  /* display: none; */
+}
+
+*{
+  cursor: none;
+}
+
+html, body{
+  cursor: none;
+}
+
+a{
+  cursor:none
+}
+
+div{
+  cursor:none
+}
+
+button{
+  cursor: none;
+}
+
+.cursor {
+  padding: 5px;
+  /* width: 20px; */
+  /* height: 20px; */
+  border: 2px solid #fefefe;
+  border-radius: 100%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 100ms ease;
+  transition-property: background-color, opacity, transform, mix-blend-mode, padding;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  background-color: white; 
+
+}
+
+.cursor--hidden {
+  opacity: 0;
+}
+
+.cursor--link-hovered {
+  transform: translate(-50%, -50%)  ;
+  padding: 15px;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: 100ms;
+}
+
+.cursor--clicked {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: #fefefe;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease-in-out;
+  position:absolute
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1);
+}
+
+
+.scroll-images {
+ 
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+
+.noscroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noscroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+ 
